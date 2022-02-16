@@ -1,0 +1,7 @@
+distlib==0.3.4
+envparse==0.2.0
+filelock==3.5.0
+parso==0.8.3
+platformdirs==2.5.0
+prompt-toolkit==3.0.24
+Pygments==2.11.2
