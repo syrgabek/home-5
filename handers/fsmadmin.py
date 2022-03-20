@@ -1,7 +1,7 @@
 from aiogram import types, Dispatcher
 from aiogram.dispatcher import FSMContext
 from aiogram.dispatcher.filters.state import State, StatesGroup
-
+from database import bot_db
 from python_bot.bot_instance import bot
 
 
@@ -46,8 +46,9 @@ async def load_description(message: types.Message,
     if message.from_user.id == ADMIN_ID:
         async with state.proxy() as data:
             data["description"] = message.text
-        async with state.proxy() as data:
-            await message.reply(str(data))
+        # async with state.proxy() as data:
+        #     await message.reply(str(data))
+        await  bot_db.sgl_command_insert(state)
         await state.finish()
 
 

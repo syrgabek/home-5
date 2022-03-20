@@ -29,6 +29,7 @@ async def problem_1(message: types.Message):
         reply_markup=markup)
 
 
+
 # -----------------HARRY POTTER-------------------------------------------------------------------------
 async def harry_potter_1(message: types.Message):
     question = "guess the character from harry potter"
@@ -88,7 +89,7 @@ async def car_quiz(message: types.Message):
         type="quiz",
         reply_markup=markup,
     )
-
+async def show_all_
 
 
 def register_handlers_client(dp: Dispatcher):
